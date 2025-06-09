@@ -52,8 +52,6 @@ model = load_or_train_model()
 if st.button("Predecir"):
     pred = model.predict(input_df)[0]
     if pred == 1:
-        st.error(f"El modelo predice que el paciente **tiene diabetes**. (Probabilidad: {prob:.2f})")
+        st.error("El modelo predice que la persona TIENE diabetes.")
     else:
-        st.success(f"El modelo predice que el paciente **no tiene diabetes**. (Probabilidad: {prob:.2f})")
-
-        
+        st.success("El modelo predice que la persona NO tiene diabetes.")
